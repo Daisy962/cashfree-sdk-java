@@ -5,6 +5,8 @@ public class ExceptionThrower {
   public static void throwException(int resCode, String xRequestId, String message) {
     String msg = "Message : "+ message + " | X-Request-Id: " + xRequestId;
     switch (resCode) {
+      case 200:
+        break;
       case 400:
         throw new BadRequestException(msg);
       case 401:
